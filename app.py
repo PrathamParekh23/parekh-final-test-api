@@ -7,14 +7,12 @@ ip_address = socket.gethostbyname(hostname)
 
 @app.route('/')
 def hello_cloud():
-  return 'Welcome to parekh Final Test API SERVER'
+    return 'Welcome to parekh Final Test API SERVER'
 
 @app.route('/host')
 def host_name():
-  return hostname
+    return hostname
 
 @app.route('/ip')
 def host_ip():
-  return ip_address
-
-app.run(host='0.0.0.0')
+    return ip_address
