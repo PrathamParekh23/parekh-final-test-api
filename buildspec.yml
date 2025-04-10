@@ -16,3 +16,8 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 051826729213.dkr.ecr.us-east-1.amazonaws.com/parekh-final-test-api:latest
+      - echo Generating imagedefinitions.json...
+      - printf '[{"name":"parekh-app","imageUri":"051826729213.dkr.ecr.us-east-1.amazonaws.com/parekh-final-test-api:latest"}]' > imagedefinitions.json
+artifacts:
+  files:
+    - imagedefinitions.json
